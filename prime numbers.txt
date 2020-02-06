@@ -1,0 +1,36 @@
+def nextPrime(n):
+    #print(n)
+    while True:
+        n+=1
+        check=True
+        for i in range(2,n):
+            if n%i==0:
+                check=False
+                break
+            else:
+                pass
+        if(check==True):
+            return n
+        else:
+            pass
+
+def prevPrime(p):
+    #print(p)
+    while True:
+        p-=1
+        check=True
+        for i in range(2,p):
+            if p%i==0:
+                check=False
+                break
+            else:
+                pass
+        if(check==True):
+            return p
+        else:
+            pass
+
+n = p = int(input("enter any number : "))
+print (nextPrime(n))
+print (prevPrime(p))
+print (nextPrime(n)-prevPrime(p))
